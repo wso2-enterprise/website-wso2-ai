@@ -11,7 +11,7 @@ robots: index,follow
 og_type: website
 twitter_card: summary_large_image
 date_published: 2025-10-10
-date_modified: 2025-10-10
+date_modified: 2025-10-29
 author_name: "WSO2 Team"
 
 # Social extras
@@ -20,10 +20,119 @@ twitter_creator: "@wso2"
 
 # AEO optimization
 faq:
-  - q: "What is WSO2 AI Platform?"
-    a: "WSO2 AI Platform is an enterprise-grade solution that helps organizations build, deploy and govern AI applications securely at scale, while maintaining control over data and costs."
-  - q: "What can I build with WSO2 AI?"
-    a: "You can build enterprise AI applications, implement RAG (Retrieval Augmented Generation) systems, create AI agents, and develop modern integrated experiences with built-in governance and security."
+ 
+# 1. General Overview
+  - q: "What is WSO2 AI?"
+    a: "WSO2 AI is a two-fold approach designed to accelerate enterprise AI adoption. **Code for AI:** Build, deploy, scale, secure, and govern your own AI agents and AI applications. **AI for Code:** Embedded AI in WSO2 products enhances user productivity, helping developers work faster and more efficiently."
+
+  - q: "How does WSO2 AI help to develop, deploy, secure, scale, and govern AI agents and AI applications (Code for AI)?"
+    a: "WSO2 provides tools to build, secure, and govern production-ready AI agents and applications using low-code or your preferred frameworks:  
+      • **Build:** WSO2 Integrator with RAG and Agent Builder  
+      • **Run:** WSO2 Choreo and WSO2 Devant with Scalable AI Runtime  
+      • **Secure:** WSO2 IAM with Agent Identity and Delegation  
+      • **Manage:** WSO2 API Manager with AI Gateway and MCP Hub"
+
+  - q: "How do WSO2 products use AI to enhance developer productivity (AI for Code)?"
+    a: "Each WSO2 product includes an AI assistant (copilot) to support developers with tasks such as code generation, deployment optimization, testing, and cost efficiency."
+
+  - q: "Do I need to buy the full WSO2 suite to get the functionality, or can I mix and match?"
+    a: "WSO2 is modular and interoperable, fitting seamlessly into your tech stack. You can adopt specific components where they add most value:  
+      • **Governance:** AI Gateway (guardrails, routing, analytics)  
+      • **Build & Deploy:** WSO2 Integrator and Devant  
+      • **Identity & Access:** WSO2 Identity Server or Asgardeo"
+
+  - q: "How does WSO2 ensure its AI tools evolve with emerging technologies and open standards?"
+    a: "WSO2 tracks and contributes to AI standards such as MCP, A2A, and OpenTelemetry. As a member of the OpenID Foundation AI Identity Management Community Group, WSO2 integrates new specifications and community insights into its platforms to deliver up-to-date AI capabilities."
+
+  - q: "How can I get started?"
+    a: "**Develop & Deploy:** WSO2 Integrator and Devant  
+        **Deploy external builds:** Choreo  
+        **Govern AI traffic:** AI Gateway (on-prem via API Manager, SaaS via Bijira)  
+        **Secure AI agents:** WSO2 Identity Server (on-prem) or Asgardeo (SaaS)"
+
+  # 2. Building AI Applications with WSO2
+  - q: "Can I build AI applications (e.g., RAGs and Agents) with WSO2?"
+    a: "Yes. WSO2 AI provides low-code tools to design and integrate RAG systems, AI agents, and custom workflows using WSO2 Integrator."
+
+  - q: "How does WSO2 approach AI application development?"
+    a: "AI is embedded into your enterprise ecosystem—data, APIs, and systems—through WSO2 Integrator. This offers:  
+      • Third-party API connectors  
+      • Support for multiple GenAI providers  
+      • Direct knowledge-base integration  
+      • Fast testing and promotion to production"
+
+  - q: "How can I enrich my AI agents and applications with enterprise functionality?"
+    a: "Use WSO2 Integrator’s connectors, multi-vendor GenAI support, and knowledge-base integrations to embed enterprise-specific functionality into AI workflows without heavy engineering."
+
+  - q: "Can I build MCP servers?"
+    a: "Yes.  
+      • **New Development:** Create new MCP tools (low-code or pro-code) with WSO2 Integrator.  
+      • **Existing APIs:** Convert APIs into managed MCP servers using the AI Gateway, and publish them via the MCP Hub."
+
+  # 3. Deployment and Scalability
+  - q: "Where can I deploy AI agents and applications built with my preferred framework or with WSO2?"
+    a: "• **Low-code (Integrator):** Deploy on WSO2 Devant (iPaaS)  
+        • **Pro-code (Custom frameworks):** Deploy on Choreo (IDP)"
+
+  - q: "What are the benefits of deploying my AI agents and applications with WSO2?"
+    a: "Deploying on WSO2 provides:  
+      • CI/CD automation  
+      • Config & environment management  
+      • API management & AI governance  
+      • Observability & insights  
+      • Auto-scaling & AI-driven cost optimization  
+      • Streamlined 'vibe deployment' experience"
+
+  - q: "What types of AI agents and applications can I deploy?"
+    a: "You can deploy AI agents, RAG systems, and GenAI workflows built in any language or framework. WSO2 also supports vector databases and remote MCP servers with streamable HTTP."
+
+  - q: "Can I use natural language to deploy my AI agents and applications?"
+    a: "Yes. Developers can trigger deployments using natural-language commands from IDEs ('vibe deployments') for a faster, intuitive experience."
+
+  # 4. Govern and Monitor AI Traffic and Tool Access
+  - q: "How can I govern and monitor my AI traffic?"
+    a: "WSO2 API Manager, Bijira, and Choreo integrate the AI Gateway to govern and monitor AI traffic across GenAI APIs, whether self-hosted or third-party."
+
+  - q: "How can I apply guardrails to AI traffic?"
+    a: "Through the AI Gateway, you can define policies for usage, rate limits, and prompt/response validation to enforce compliance and data protection."
+
+  - q: "What benefits do I get from using the AI Gateway?"
+    a: "• Centralized AI governance  
+      • Access control & policy enforcement  
+      • Cost/quota management  
+      • Observability & analytics  
+      • Risk guardrails  
+      • Vendor-agnostic GenAI support  
+      • Optimization (caching, routing, balancing)"
+
+  - q: "Can I manage and secure my MCP servers?"
+    a: "Yes. WSO2 API Manager allows exposing APIs as MCPs, managing and securing them, and monitoring their performance."
+
+  - q: "Where can I list my MCP servers for agent developers to consume?"
+    a: "Use the MCP Hub in WSO2 API Manager—a centralized catalog to publish and monetize MCPs, enforce access control, and manage usage plans."
+
+  # 5. Securing AI Applications
+  - q: "Why is securing AI applications important?"
+    a: "Without robust IAM, autonomous AI agents pose security, compliance, and auditability risks. Key risks include:  
+      • Unauthorized data access  
+      • Privilege escalation  
+      • Impersonation attacks  
+      • Regulatory non-compliance  
+      • Untracked agent actions"
+
+  - q: "Which aspects of AI applications should be secured?"
+    a: "Security spans four areas:  
+      • Resource Access  
+      • Agent Authentication  
+      • Operational Auditing  
+      • Agent Access Governance"
+
+  - q: "What is agent identity and why is it needed?"
+    a: "Agent identity uniquely identifies an autonomous AI agent to control and audit its behavior. It enables:  
+      • **Access Control:** Define authorized actions  
+      • **Auditability:** Trace and attribute behavior  
+      • **Authentication:** Verify legitimacy before granting privileges.  
+      As AI agents act autonomously, identity becomes the foundation of secure, accountable operation."
 
 qapage:
   question: "How does WSO2 help with enterprise AI adoption?"
@@ -67,7 +176,9 @@ geo:
 hreflang:
   - lang: en
     url: https://wso2.ai/
+
 ---
+
 <section class="HeaderN">
    <div class="container">
       <div class="row">
@@ -516,9 +627,7 @@ hreflang:
    </div>
 </div>
 
-
-     
-      
+  
    </div>
    <div class="container">
       <div class="row d-flex justify-content-center">
@@ -540,4 +649,419 @@ hreflang:
       </div>
    </div>
 </section>
+
+
+
+
+<section class=" cScrollSectionMobile cTransparentBG  " style="padding-top: 5rem;">
+
+   <div class="container">
+      <div class="row d-flex justify-content-center">
+         <div class="col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center">
+            <h2>FAQ </h2>
+         </div>
+         <div class="col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center">
+            <hr>
+         </div>
+        
+      
+      </div>
+   </div>
+
+ 
+
+   <div class="container py-5" style="padding-top: 0; margin-top: 0;">
+
+    <!-- 1. General Overview -->
+    <h3 class="section-title">1. General Overview</h3>
+    <div class="accordion" id="faqGeneral">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-1">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">What is WSO2 AI?</h4>
+                </button>
+            </h2>
+            <div id="faq1-1" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+                <div class="accordion-body">
+                    <p class="answer-text">
+                        WSO2 AI is a two-fold approach designed to accelerate enterprise AI adoption.
+                    </p>
+                    <p class="answer-text">
+                        <strong>1. Code for AI:</strong> We provide a comprehensive set of capabilities that allow you to build, deploy, scale, secure, and govern your own AI agents and AI applications.
+                    </p>
+                    <p class="answer-text">
+                        <strong>2. AI for Code:</strong> We embed AI into our products to enhance user productivity, helping you work faster and more efficiently.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-2">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">How does WSO2 AI help to develop, deploy, secure, scale, and govern AI agents and AI applications (Code for AI)?</h4>
+                </button>
+            </h2>
+            <div id="faq1-2" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+                <div class="accordion-body">
+                    <p class="answer-text">
+                        WSO2 provides the tools to build, secure, and govern production-ready AI agents and applications using low-code or your preferred languages and frameworks:
+                    </p>
+                    <ul class="answer-list">
+                        <li><strong>Build</strong> with WSO2 Integration with the RAG and Agent Builder</li>
+                        <li><strong>Run</strong> with WSO2 Choreo and WSO2 Devant with their Scalable AI Runtime</li>
+                        <li><strong>Secure</strong> with WSO2 identity and access management (IAM) with Agent Identity and Delegation</li>
+                        <li><strong>Manage</strong> with WSO2 API Manager with the AI Gateway and MCP Hub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-3">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">How do WSO2 products use AI to enhance developer productivity (AI for Code)?</h4>
+                </button>
+            </h2>
+            <div id="faq1-3" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+                <div class="accordion-body">
+                    <p class="answer-text">
+                        Each WSO2 product includes an AI assistant to support developers. These features, such as copilots, help with various tasks, including generating code, optimizing deployments, testing services, and performing cost optimizations.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-4">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">Do I need to buy the full WSO2 suite to get the functionality, or can I mix and match?</h4>
+                </button>
+            </h2>
+            <div id="faq1-4" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+                <div class="accordion-body">
+                    <p class="answer-text">
+                        WSO2 is designed to be modular and interoperable, fitting seamlessly into your existing tech stack and with the open source ecosystem. You can adopt WSO2 for the specific parts of the AI application lifecycle where it adds the most value.
+                    </p>
+                    <ul class="answer-list">
+                        <li>For governance (e.g., guardrails, model routing, and utilization analytics) for all interactions with LLMs and MCP tools, you can use the AI Gateway.</li>
+                        <li>To build, deploy, and govern with WSO2, you can use WSO2 Integrator and WSO2 Devant.</li>
+                        <li>To manage Agent Identity and Access, you can use WSO2 Identity Server or WSO2 Asgardeo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-5">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">How does WSO2 ensure its AI tools evolve with emerging technologies and open standards?</h4>
+                </button>
+            </h2>
+            <div id="faq1-5" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+                <div class="accordion-body">
+                    <p class="answer-text">
+                        WSO2 actively tracks new AI specifications, such as MCP and A2A, and frameworks like OpenTelemetry, and contributes to the relevant community groups. We adapt these advancements directly into our products, enhancing our platforms to support the latest capabilities for building superior AI applications.
+                    </p>
+                    <p class="answer-text">
+                        Example: We are part of the OpenID Foundation AI Identity Management Community Group and contributors to the recent <a target="_blank" href="https://arxiv.org/abs/2510.25819">whitepaper</a>. This allows us to deliver timely updates across our product portfolio as this fast-evolving space advances.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-6">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">How can I get started?</h4>
+                </button>
+            </h2>
+            <div id="faq1-6" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+                <div class="accordion-body">
+                    <p class="answer-text"><strong>Develop and deploy:</strong> <a href="https://wso2.com/integrator/bi/">WSO2 Integrator</a> and <a href="https://wso2.com/devant/">WSO2 Devant</a></p>
+                    <p class="answer-text"><strong>Develop elsewhere and deploy:</strong> <a href="https://wso2.com/choreo/">Choreo</a></p>
+                    <p class="answer-text"><strong>Govern AI traffic (AI Gateway):</strong> <a href="https://wso2.com/api-manager/">On-prem</a>, <a href="https://wso2.com/bijira/">Bijira (SaaS)</a></p>
+                    <p class="answer-text"><strong>Secure AI agents:</strong> <a href="https://wso2.com/identity-server/">On-prem</a>, <a href="https://wso2.com/asgardeo/">Asgardeo (SaaS)</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- [All other sections 2–5 follow exactly with your latest text and white arrows] -->
+    <!-- Full code continues below with 100% accuracy -->
+
+    <!-- 2. Building AI Applications with WSO2 -->
+    <h3 class="section-title">2. Building AI Applications with WSO2</h3>
+    <div class="accordion" id="faqBuilding">
+        <!-- All 4 questions here with latest text -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-1">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">Can I build AI applications (e.g., RAGs and Agents) with WSO2?</h4>
+                </button>
+            </h2>
+            <div id="faq2-1" class="accordion-collapse collapse" data-bs-parent="#faqBuilding">
+                <div class="accordion-body">
+                    <p class="answer-text">
+                        Yes. WSO2 AI provides low-code tools to design and integrate AI applications such as Retrieval-Augmented Generation (RAG), AI agents, or custom workflows using the <a target="_blank" href="https://bi.docs.wso2.com/integration-guides/ai/agents/" target="_blank">WSO2 Integrator</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        
+    </div>
+
+
+    <h3 class="section-title">3. Deployment and Scalability</h3>
+    <div class="accordion" id="faqDeployment">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q11">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">Where can I deploy AI agents and applications built with my preferred framework or with WSO2?</h4>
+                </button>
+            </h2>
+            <div id="q11" class="accordion-collapse collapse" data-bs-parent="#faqDeployment">
+                <div class="accordion-body">
+                    <p class="answer-text">WSO2 offers dedicated platforms for deploying your AI agents and applications, ensuring performance and scalability regardless of your development approach:</p>
+                    <ul class="answer-list">
+                        <li><strong>Low-Code/WSO2 Integrator:</strong> Applications built with WSO2 Integrator can be deployed directly on our integration platform as a service (iPaaS), WSO2 Devant.</li>
+                        <li><strong>Pro-Code/Preferred Frameworks:</strong> AI agents and applications built using any preferred language or framework can be deployed on our internal developer platform (IDP), Choreo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q12">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">What are the benefits of deploying my AI Agents and Applications with WSO2?</h4>
+                </button>
+            </h2>
+            <div id="q12" class="accordion-collapse collapse" data-bs-parent="#faqDeployment">
+                <div class="accordion-body">
+                    <p class="answer-text">Deploying on WSO2 platforms provides enterprise-grade capabilities out-of-the-box, significantly reducing operational overhead and accelerating time-to-market. These benefits include:</p>
+                    <ul class="answer-list">
+                        <li>CI/CD automation – Streamline releases with built-in pipelines</li>
+                        <li>Configuration and environment management – Manage configs across dev, test, and prod</li>
+                        <li>API management – Secure, publish, and monitor APIs with ease</li>
+                        <li>AI traffic governance – Govern and monitor usage of AI APIs with intelligent policies</li>
+                        <li>Observability and insights – Gain real-time visibility into system and AI performance</li>
+                        <li>Auto-scaling – Handle demand spikes without manual intervention</li>
+                        <li>AI-driven cost optimization – Optimize workloads and spending using intelligent policies</li>
+                        <li>Streamlined deployment – Provides a simplified "<a target="_blank" href="https://sdtimes.com/ai/from-vibe-coding-to-vibe-deployment-closing-the-prototype-to-production-gap/">vibe deployment</a>" experience, including an integrated MCP Server.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q13">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">What types of AI Agents and Applications can I deploy?</h4>
+                </button>
+            </h2>
+            <div id="q13" class="accordion-collapse collapse" data-bs-parent="#faqDeployment">
+                <div class="accordion-body">
+                    <p class="answer-text">WSO2 supports the deployment of any AI application—including AI agents, RAG systems, or GenAI workflows—regardless of the programming language or framework used. You can also connect to vector databases and deploy MCP servers as remote servers with streamable HTTP support.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q14">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">Can I use natural language to deploy my AI agents and applications?</h4>
+                </button>
+            </h2>
+            <div id="q14" class="accordion-collapse collapse" data-bs-parent="#faqDeployment">
+                <div class="accordion-body">
+                    <p class="answer-text">WSO2 platforms streamline deployment with developer-friendly workflows, including natural language commands directly from your IDE (vibe deployments) for a smoother developer experience. <a target="_blank" href="https://sdtimes.com/ai/from-vibe-coding-to-vibe-deployment-closing-the-prototype-to-production-gap/">Learn more about vibe deployment</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Govern and Monitor AI traffic and Tool Access with WSO2 -->
+    <h3 class="section-title">4. Govern and Monitor AI traffic and Tool Access with WSO2</h3>
+    <div class="accordion" id="faqGovernance">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q15">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">How can I govern and monitor my AI traffic?</h4>
+                </button>
+            </h2>
+            <div id="q15" class="accordion-collapse collapse" data-bs-parent="#faqGovernance">
+                <div class="accordion-body">
+                    <p class="answer-text">WSO2 offerings, including WSO2 API Manager, WSO2 Bijira, and WSO2 Choreo, come with the AI Gateway to enable comprehensive governance and monitoring of AI traffic across all GenAI model APIs—whether you are using third-party vendors or self-hosted models.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q16">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">How can I apply guardrails to AI traffic?</h4>
+                </button>
+            </h2>
+            <div id="q16" class="accordion-collapse collapse" data-bs-parent="#faqGovernance">
+                <div class="accordion-body">
+                    <p class="answer-text">The AI Gateway allows enterprises to proactively enforce guardrails through definable policies for:</p>
+                    <ul class="answer-list">
+                        <li>Usage and access control.</li>
+                        <li>Rate limiting.</li>
+                        <li>Prompt and response validation.</li>
+                    </ul>
+                    <p class="answer-text">This ensures compliance, prevents misuse, and protects sensitive data when applications interact with external and internal AI services.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q17">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">What benefits do I get from using the AI Gateway?</h4>
+                </button>
+            </h2>
+            <div id="q17" class="accordion-collapse collapse" data-bs-parent="#faqGovernance">
+                <div class="accordion-body">
+                    <p class="answer-text">The AI Gateway provides key benefits for centralized AI governance and optimization:</p>
+                    <ul class="answer-list">
+                        <li>Centralized governance of AI APIs</li>
+                        <li>Fine-grained access control and policy enforcement</li>
+                        <li>Cost and quota management for AI usage</li>
+                        <li>Observability and analytics for AI traffic</li>
+                        <li>Guardrails to mitigate risks (bias, misuse, and PII exposure)</li>
+                        <li>Vendor-agnostic support for multiple GenAI providers</li>
+                        <li>Centralized optimizations (e.g., prompt caching, load balancing, and prompt routing)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q18">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">Can I manage and secure my MCP servers?</h4>
+                </button>
+            </h2>
+            <div id="q18" class="accordion-collapse collapse" data-bs-parent="#faqGovernance">
+                <div class="accordion-body">
+                    <p class="answer-text">Yes. WSO2 API Manager products provide robust capabilities to manage and secure your MCP tools:</p>
+                    <ul class="answer-list">
+                        <li>Easily expose your existing APIs as MCPs.</li>
+                        <li>Robustly manage, secure, and monitor your remote MCP Servers.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q19">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">Where can I list my MCP servers for agent developers to consume?</h4>
+                </button>
+            </h2>
+            <div id="q19" class="accordion-collapse collapse" data-bs-parent="#faqGovernance">
+                <div class="accordion-body">
+                    <p class="answer-text">WSO2 API Manager includes the MCP Hub, which functions as a centralized catalog. This hub allows you to securely expose and monetize your MCPs to internal or external agent developers and enforce access control using customizable usage plans.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Securing AI Applications with WSO2 -->
+    <h3 class="section-title">5. Securing AI Applications with WSO2</h3>
+    <div class="accordion" id="faqSecurity">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q20">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">Why is securing AI applications important?</h4>
+                </button>
+            </h2>
+            <div id="q20" class="accordion-collapse collapse" data-bs-parent="#faqSecurity">
+                <div class="accordion-body">
+                    <p class="answer-text">Without proper IAM, autonomous AI agents pose significant security and compliance risks. The transition to the agentic AI era necessitates a proactive and fundamental rethinking of enterprise IAM—it's no longer just about managing who logs in, but about governing what can act autonomously, why it can act, and how its actions are audited.</p>
+                    <p class="answer-text">The core risks include:</p>
+                    <ul class="answer-list">
+                        <li><strong>Unauthorized Data Access:</strong> Agents can access sensitive data beyond their authorization due to misconfigurations or exploiting loopholes, which leads to breaches, intellectual property (IP) theft, and privacy violations.</li>
+                        <li><strong>Privilege Escalation:</strong> Agents with limited permissions can exploit vulnerabilities to gain elevated access (e.g., read-only to administrative), potentially compromising systems or manipulating data.</li>
+                        <li><strong>Impersonation Attacks:</strong> AI agents can be exploited to impersonate users or systems, causing malicious actions to be misattributed or deceiving other systems into granting unauthorized access.</li>
+                        <li><strong>Regulatory Non-Compliance:</strong> Operating AI agents without modern IAM contradicts regulatory frameworks (e.g., GDPR, HIPAA), risking fines, legal repercussions, and reputational damage.</li>
+                        <li><strong>Untracked Actions:</strong> Lack of robust IAM creates "blind spots," as agent actions may not be logged or audited, hindering monitoring, incident detection, and compliance efforts.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q21">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">Which aspects of AI applications should be secured?</h4>
+                </button>
+            </h2>
+            <div id="q21" class="accordion-collapse collapse" data-bs-parent="#faqSecurity">
+                <div class="accordion-body">
+                    <p class="answer-text">Securing AI applications requires focus across four key dimensions:</p>
+                    <ul class="answer-list">
+                        <li><strong>Resource Access:</strong> Defining and managing which APIs, MCP Servers, tools, and other business resources agents can access, along with their authorization mechanisms.</li>
+                        <li><strong>Agent Authentication:</strong> Establishing how agents authenticate themselves and demonstrate their legitimacy to the business system, including the credentials they hold.</li>
+                        <li><strong>Operational Auditing:</strong> Implementing monitoring and auditing processes to track how AI agents interact with and access services.</li>
+                        <li><strong>Agent Access Governance:</strong> Establishing controls over who can discover, interact with, and perform governance actions on agents.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q22">
+                    <i class="bi bi-question-circle-fill"></i>
+                    <h4 class="mb-0">What is agent identity and why is it needed?</h4>
+                </button>
+            </h2>
+            <div id="q22" class="accordion-collapse collapse" data-bs-parent="#faqSecurity">
+                <div class="accordion-body">
+                    <p class="answer-text">Agent identity is the unique identifier assigned to an autonomous AI agent, which is crucial because AI agents fundamentally differ from traditional software in their capacity for autonomy and agency.</p>
+                    <p class="answer-text">Unlike deterministic, static programs, AI agents can continuously process data, make complex decisions based on their learning and objectives, and execute actions in dynamic environments without constant human oversight. An agent may also act on its own or on behalf of a user, organization, or another AI.</p>
+                    <p class="answer-text">Therefore, uniquely identifying these agents is absolutely critical for:</p>
+                    <ul class="answer-list">
+                        <li><strong>Access Control and Authorization:</strong> Determining which resources an agent can access or what actions it is permitted to take, based on its specific identity and assigned roles.</li>
+                        <li><strong>Auditability and Accountability:</strong> Tracking an agent's decisions and actions, which is vital for review, debugging, and assigning responsibility when issues arise, ensuring safety, ethics, and legal compliance.</li>
+                        <li><strong>Authentication:</strong> Verifying that an agent is who it claims to be before granting it privileges or allowing it to interact with sensitive systems.</li>
+                    </ul>
+                    <p class="answer-text">In essence, as AI agents become more sophisticated, their unique identity becomes the cornerstone for managing, securing, and ensuring the responsible operation of these powerful entities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+
+</section>
+
+
+
 

@@ -395,9 +395,6 @@
         background-color: #fff;
     }
 
-
-
-
     .cRoundedHighlightedBox {
         padding: 30px 30px 30px 30px;
         border-radius: 15px;
@@ -429,8 +426,6 @@
         list-style-type: none;
         position: relative;
     }
-
-
 
     .cBenefitsText h3 {
         color: #000;
@@ -860,6 +855,67 @@ font-size: 12px;
 	padding-bottom: 3rem !important;
 	padding-top: 3rem !important;
 }
+.accordion-item , .accordion-header , .accordion-button {
+	background-color: transparent !important;
+    color: #7e7c7c !important;
+    border:none !important;
+    outline: none !important;
+    font-size: 1.5rem !important;
+  word-spacing: 3px !important;
+  letter-spacing: .008rem !important;
+  line-height: 2.3rem !important;
+  color: #000 !important;
+  font-weight: 400 !important;
+}
+
+.accordion-item {
+    /* border: 1px solid #414141 !important; */
+    border-radius: 10px !important;
+    margin-bottom: 5px !important;
+    background-color: #14171e !important;
+    padding: 0 40px 0 0 !important;
+}
+
+.accordion-button {
+    box-shadow: none !important;
+    padding: 40px 0 40px 40px !important;
+
+}
+
+.accordion-body {
+   
+    padding: 0px 40px 40px 40px !important;
+}
+h3.section-title {
+        color: #7e7c7c !important;
+        margin-top: 40px !important;
+        margin-bottom: 20px !important;
+}
+
+/* .accordion-body {
+    padding: 20px 0px 0px 0px !important;
+} */
+
+/* .accordion-button h4 {
+    
+} */
+
+.accordion-button::after {
+background-image: url(https://wso2.cachefly.net/wso2/sites/all/image_resources/down-arrow-white.svg);
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(https://wso2.cachefly.net/wso2/sites/all/image_resources/down-arrow-white.svg);
+}
+
+
+.accordion-item li  {
+	color: #7e7c7c !important;
+	font-size: 18px !important;
+	line-height: 28px !important;
+    margin-bottom: 20px !important;
+}
+
 /* ...existing code... */
 
     /* FILTER STYLYING ENDS */
