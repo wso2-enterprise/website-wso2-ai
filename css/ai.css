@@ -892,6 +892,10 @@ h3.section-title {
         margin-bottom: 20px !important;
 }
 
+#navbarTogglerDemo02 {
+    background-color: #000;
+}
+
 /* .accordion-body {
     padding: 20px 0px 0px 0px !important;
 } */
@@ -916,13 +920,16 @@ background-image: url(https://wso2.cachefly.net/wso2/sites/all/image_resources/d
     margin-bottom: 20px !important;
 }
 
-/* ...existing code... */
 
     /* FILTER STYLYING ENDS */
 
     @media screen and (max-width: 728px) {
         .cHeroImage img {
             display: none;
+        }
+        #navbarTogglerDemo02 {
+            background-color: #000;
+            padding: 0 10px 10px 10px !important;
         }
     }
 
