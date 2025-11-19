@@ -920,6 +920,11 @@ background-image: url(https://wso2.cachefly.net/wso2/sites/all/image_resources/d
     margin-bottom: 20px !important;
 }
 
+li.nav-item {
+	border: none !important;
+	margin-right: 20px;
+}
+
 
     /* FILTER STYLYING ENDS */
 
@@ -931,6 +936,10 @@ background-image: url(https://wso2.cachefly.net/wso2/sites/all/image_resources/d
             background-color: #000;
             padding: 0 10px 10px 10px !important;
         }
+        li.nav-item {
+	/* border: none !important; */
+	margin-right: 0px;
+}
     }
 
     @media screen and (max-width: 574px) {
