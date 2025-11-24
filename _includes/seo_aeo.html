@@ -1,7 +1,3 @@
-
-
-
-
 {%- if page.faq and page.faq.size > 0 -%}
 <script type="application/ld+json">
 {
@@ -22,7 +18,6 @@
     {
       "@type": "Question",
       "name": {{ item.q | jsonify }},
-      "text": {{ q_text_raw | jsonify }},
       "url": {{ q_url | jsonify }},
       "author": {
         "@type": "Organization",
@@ -46,4 +41,3 @@
 }
 </script>
 {%- endif -%}
-

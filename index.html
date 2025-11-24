@@ -18,7 +18,7 @@ author_name: "WSO2"
 og_site_name: "WSO2"
 twitter_creator: "@wso2"
 
-# AEO optimization
+# AEO optimization - on-page FAQ content
 faq:
 
   # 1. General Overview
@@ -310,7 +310,364 @@ faq:
     answer_url: "https://wso2.ai/#faq-agent-identity-answer"
     upvoteCount: 0
 
-# QAPage (single highlighted Q&A)
+# FAQPage JSON-LD (correct structure, no explicit answerCount needed)
+faq_schema:
+  "@context": "https://schema.org"
+  "@type": "FAQPage"
+  mainEntity:
+    - "@type": "Question"
+      name: "What is WSO2 AI?"
+      url: "https://wso2.ai/#faq-what-is-wso2-ai"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "WSO2 AI is a two-fold approach designed to accelerate enterprise AI adoption. Code for AI: Build, deploy, scale, secure, and govern your own AI agents and AI applications. AI for Code: Embedded AI in WSO2 products enhances user productivity, helping developers work faster and more efficiently."
+        url: "https://wso2.ai/#faq-what-is-wso2-ai-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "How does WSO2 AI help to develop, deploy, secure, scale, and govern AI agents and AI applications (Code for AI)?"
+      url: "https://wso2.ai/#faq-lifecycle-of-ai-agents"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "WSO2 provides tools to build, secure, and govern production-ready AI agents and applications using low-code or your preferred frameworks: Build with WSO2 Integrator and Agent Builder; run on WSO2 Choreo and WSO2 Devant with scalable AI runtime; secure with WSO2 IAM and agent identity; and manage with WSO2 API Manager, AI Gateway, and MCP Hub."
+        url: "https://wso2.ai/#faq-lifecycle-of-ai-agents-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "How do WSO2 products use AI to enhance developer productivity (AI for Code)?"
+      url: "https://wso2.ai/#faq-ai-for-code"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Each WSO2 product includes an AI assistant to support developers with tasks such as code generation, deployment optimization, testing, and cost efficiency."
+        url: "https://wso2.ai/#faq-ai-for-code-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "Do I need to buy the full WSO2 suite to get the functionality, or can I mix and match?"
+      url: "https://wso2.ai/#faq-mix-and-match"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "WSO2 is modular and interoperable, so you can adopt specific components where they add the most value, including AI Gateway for governance, WSO2 Integrator and Devant for build and deploy, and WSO2 Identity Server or Asgardeo for identity and access."
+        url: "https://wso2.ai/#faq-mix-and-match-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "How does WSO2 ensure its AI tools evolve with emerging technologies and open standards?"
+      url: "https://wso2.ai/#faq-evolving-standards"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "WSO2 tracks and contributes to AI standards such as MCP, A2A, and OpenTelemetry, and participates in the OpenID Foundation AI Identity Management Community Group to align its platforms with emerging specifications and community insights."
+        url: "https://wso2.ai/#faq-evolving-standards-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "How can I get started?"
+      url: "https://wso2.ai/#faq-get-started"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "You can develop and deploy with WSO2 Integrator and Devant, deploy external builds on Choreo, govern AI traffic with AI Gateway via API Manager or Bijira, and secure AI agents using WSO2 Identity Server or Asgardeo."
+        url: "https://wso2.ai/#faq-get-started-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "Can I build AI applications (e.g., RAGs and Agents) with WSO2?"
+      url: "https://wso2.ai/#faq-build-ai-applications"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Yes. WSO2 AI provides low-code tools in WSO2 Integrator to design and integrate RAG systems, AI agents, and custom workflows."
+        url: "https://wso2.ai/#faq-build-ai-applications-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "How does WSO2 approach AI application development?"
+      url: "https://wso2.ai/#faq-ai-app-dev-approach"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "WSO2 integrates AI into your enterprise ecosystem of data, APIs, and systems through WSO2 Integrator, providing API connectors, support for multiple GenAI providers, direct knowledge-base integration, and streamlined testing and promotion to production."
+        url: "https://wso2.ai/#faq-ai-app-dev-approach-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "How can I enrich my AI agents and applications with enterprise functionality?"
+      url: "https://wso2.ai/#faq-enrich-ai-agents"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "WSO2 Integrator’s connectors, multi-vendor GenAI support, and knowledge-base integrations make it easy to embed enterprise-specific functionality into AI workflows without heavy engineering."
+        url: "https://wso2.ai/#faq-enrich-ai-agents-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "Can I build MCP servers?"
+      url: "https://wso2.ai/#faq-mcp-servers"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Yes. You can create new MCP tools with WSO2 Integrator using low-code or pro-code, and convert existing APIs into managed MCP servers using the AI Gateway, then publish them via MCP Hub."
+        url: "https://wso2.ai/#faq-mcp-servers-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "Where can I deploy AI agents and applications built with my preferred framework or with WSO2?"
+      url: "https://wso2.ai/#faq-deploy-ai-apps"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "You can deploy low-code workloads built with WSO2 Integrator on WSO2 Devant and pro-code workloads built with custom frameworks on Choreo."
+        url: "https://wso2.ai/#faq-deploy-ai-apps-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "What are the benefits of deploying my AI agents and applications with WSO2?"
+      url: "https://wso2.ai/#faq-deployment-benefits"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Deploying on WSO2 provides CI/CD automation, configuration and environment management, API management and AI governance, observability and insights, auto-scaling and AI-driven cost optimization, and a streamlined developer experience."
+        url: "https://wso2.ai/#faq-deployment-benefits-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "What types of AI agents and applications can I deploy?"
+      url: "https://wso2.ai/#faq-types-of-ai-apps"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "You can deploy AI agents, RAG systems, and GenAI workflows built in any language or framework, and WSO2 also supports vector databases and remote MCP servers using streamable HTTP."
+        url: "https://wso2.ai/#faq-types-of-ai-apps-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "Can I use natural language to deploy my AI agents and applications?"
+      url: "https://wso2.ai/#faq-natural-language-deploy"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Yes. Developers can trigger deployments using natural-language commands from IDEs, known as 'vibe deployments', for a faster, intuitive experience."
+        url: "https://wso2.ai/#faq-natural-language-deploy-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "How can I govern and monitor my AI traffic?"
+      url: "https://wso2.ai/#faq-govern-ai-traffic"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "WSO2 API Manager, Bijira, and Choreo integrate the AI Gateway to govern and monitor AI traffic across GenAI APIs, whether self-hosted or third-party."
+        url: "https://wso2.ai/#faq-govern-ai-traffic-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "How can I apply guardrails to AI traffic?"
+      url: "https://wso2.ai/#faq-guardrails"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Using AI Gateway, you can define policies for usage, rate limits, and prompt and response validation to enforce compliance and data protection across AI traffic."
+        url: "https://wso2.ai/#faq-guardrails-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "What benefits do I get from using the AI Gateway?"
+      url: "https://wso2.ai/#faq-ai-gateway-benefits"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "The AI Gateway provides centralized AI governance, access control and policy enforcement, cost and quota management, observability and analytics, risk guardrails, vendor-agnostic GenAI support, and optimization via caching, routing, and balancing."
+        url: "https://wso2.ai/#faq-ai-gateway-benefits-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "Can I manage and secure my MCP servers?"
+      url: "https://wso2.ai/#faq-manage-mcp-servers"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Yes. WSO2 API Manager allows you to expose APIs as MCPs, manage and secure them, and monitor their performance."
+        url: "https://wso2.ai/#faq-manage-mcp-servers-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "Where can I list my MCP servers for agent developers to consume?"
+      url: "https://wso2.ai/#faq-mcp-hub"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "You can list MCP servers in MCP Hub within WSO2 API Manager, providing a centralized catalog to publish and monetize MCPs while enforcing access control and managing usage plans."
+        url: "https://wso2.ai/#faq-mcp-hub-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "Why is securing AI applications important?"
+      url: "https://wso2.ai/#faq-securing-ai-apps"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Without robust IAM, autonomous AI agents pose security, compliance, and auditability risks, including unauthorized data access, privilege escalation, impersonation, regulatory non-compliance, and untracked agent actions."
+        url: "https://wso2.ai/#faq-securing-ai-apps-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "Which aspects of AI applications should be secured?"
+      url: "https://wso2.ai/#faq-what-to-secure"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Security spans four areas: resource access, agent authentication, operational auditing, and agent access governance."
+        url: "https://wso2.ai/#faq-what-to-secure-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+    - "@type": "Question"
+      name: "What is agent identity and why is it needed?"
+      url: "https://wso2.ai/#faq-agent-identity"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-10-10T00:00:00+05:30"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Agent identity uniquely identifies an autonomous AI agent to control and audit its behavior. It enables access control to define authorized actions, auditability to trace and attribute behavior, and authentication to verify legitimacy. As AI agents act autonomously, identity becomes the foundation of secure, accountable operation."
+        url: "https://wso2.ai/#faq-agent-identity-answer"
+        author:
+          "@type": "Organization"
+          name: "WSO2"
+        datePublished: "2025-10-29T00:00:00+05:30"
+
+# QAPage (content)
 qapage:
   question: "How does WSO2 help with enterprise AI adoption?"
   text: "How does WSO2 help enterprises adopt AI across development, deployment, governance, and security?"
@@ -327,6 +684,33 @@ qapage:
   answer_date_published: 2025-11-20 11:00:00 +0530
   answer_url: "https://example.com/docs/openchoreo#get-started-answer"
   upvoteCount: 12
+
+# QAPage JSON-LD (with answerCount and acceptedAnswer to satisfy GSC)
+qapage_schema:
+  "@context": "https://schema.org"
+  "@type": "QAPage"
+  mainEntity:
+    "@type": "Question"
+    name: "How does WSO2 help with enterprise AI adoption?"
+    url: "https://example.com/docs/openchoreo#get-started"
+    author:
+      "@type": "Organization"
+      name: "WSO2"
+    datePublished: "2025-11-20T10:30:00+05:30"
+    answerCount: 1
+    acceptedAnswer:
+      "@type": "Answer"
+      text: >
+        WSO2 provides a comprehensive AI platform that enables organizations to build AI
+        applications with proper governance, security, and control. It includes features
+        for RAG systems, AI agents, and integration capabilities while ensuring data
+        privacy and cost management.
+      url: "https://example.com/docs/openchoreo#get-started-answer"
+      author:
+        "@type": "Organization"
+        name: "WSO2"
+      datePublished: "2025-11-20T11:00:00+05:30"
+      upvoteCount: 12
 
 breadcrumbs:
   - name: "Home"
@@ -366,7 +750,6 @@ geo:
 hreflang:
   - lang: en
     url: https://wso2.ai/
-
 ---
 
 
