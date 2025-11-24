@@ -1,112 +1,45 @@
-{%- comment -%}
-  SEO + AEO + GEO + Social (2025)
-  Usage: {% include seo_aeo.html %}
-{%- endcomment -%}
 
-{%- assign page_title   = page.title | default: site.title -%}
-{%- assign page_desc    = page.description | default: site.description | default: site.title -%}
-{%- assign page_url     = page.url | absolute_url -%}
-{%- assign raw_img      = page.image | default: site.image | default: "/assets/social/default-og.jpg" -%}
-{%- assign page_img     = raw_img | absolute_url -%}
-{%- assign page_img_alt = page.image_alt | default: page_title -%}
-{%- assign robots       = page.robots | default: "index,follow" -%}
-{%- assign og_type      = page.og_type | default: site.og_type | default: "website" -%}
-{%- assign tw_card      = page.twitter_card | default: site.twitter_card | default: "summary_large_image" -%}
-{%- assign tw_site      = site.twitter.site -%}
-{%- assign tw_creator   = page.twitter_creator | default: site.twitter.creator | default: site.twitter.site -%}
-{%- assign canonical    = page.canonical | default: page_url -%}
-{%- assign locale       = page.locale | default: site.locale | default: "en_US" -%}
-{%- assign og_site_name = page.og_site_name | default: site.title -%}
 
-<title>{{ page_title }}</title>
-<meta name="description" content="{{ page_desc | escape }}">
-<meta name="robots" content="{{ robots }}">
-<link rel="canonical" href="{{ canonical }}">
 
-{%- if page.keywords and page.keywords.size > 0 -%}
-<meta name="keywords" content="{{ page.keywords | join: ', ' }}">
-{%- endif -%}
-
-{%- if page.hreflang and page.hreflang.size > 0 -%}
-  {%- for alt in page.hreflang -%}
-<link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url }}">
-  {%- endfor -%}
-{%- endif -%}
-
-<!-- Open Graph -->
-<meta property="og:type" content="{{ og_type }}">
-<meta property="og:site_name" content="{{ og_site_name }}">
-<meta property="og:title" content="{{ page_title }}">
-<meta property="og:description" content="{{ page_desc | escape }}">
-<meta property="og:url" content="{{ page_url }}">
-<meta property="og:image" content="{{ page_img }}">
-<meta property="og:image:alt" content="{{ page_img_alt }}">
-<meta property="og:locale" content="{{ locale }}">
-{%- if page.fb_app_id %}<meta property="fb:app_id" content="{{ page.fb_app_id }}">{% endif -%}
-
-<!-- Twitter -->
-<meta name="twitter:card" content="{{ tw_card }}">
-{%- if tw_site %}<meta name="twitter:site" content="{{ tw_site }}">{% endif -%}
-{%- if tw_creator %}<meta name="twitter:creator" content="{{ tw_creator }}">{% endif -%}
-<meta name="twitter:title" content="{{ page_title }}">
-<meta name="twitter:description" content="{{ page_desc | escape }}">
-<meta name="twitter:image" content="{{ page_img }}">
-
-<!-- Dimension hints -->
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-{%- assign search_target = site.url | append: '/search?q=%7Bquery%7D' -%}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": {{ site.title | jsonify }},
-  "url": {{ site.url | jsonify }},
-  "publisher": {
-    "@type": "Organization",
-    "name": {{ site.organization.name | jsonify }},
-    "url": {{ site.organization.url | jsonify }},
-    "logo": {
-      "@type": "ImageObject",
-      "url": {{ site.organization.logo | absolute_url | jsonify }}
-    },
-    "sameAs": {{ site.organization.sameAs | jsonify }}
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {{ search_target | jsonify }},
-    "query-input": "required name=query"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": {{ page_title | jsonify }},
-  "url": {{ page_url | jsonify }},
-  "description": {{ page_desc | jsonify }},
-  "inLanguage": {{ locale | jsonify }}{% if page.date_published %},
-  "datePublished": "{{ page.date_published }}"{% endif %}{% if page.date_modified %},
-  "dateModified": "{{ page.date_modified }}"{% endif %}{% if page.author_name %},
-  "author": { "@type":"Person", "name": {{ page.author_name | jsonify }} }{% endif %},
-  "isPartOf": { "@type":"WebSite", "url": {{ site.url | jsonify }} }
-}
-</script>
 
 {%- if page.faq and page.faq.size > 0 -%}
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {%- for item in page.faq -%}
+    {%- assign q_text_raw      = item.text | default: item.q -%}
+    {%- assign q_author_raw    = item.author | default: page.author_name | default: site.organization.name -%}
+    {%- assign q_date_raw      = item.date_published | default: page.date_published | default: page.date -%}
+    {%- assign q_date_iso      = q_date_raw | date_to_xmlschema -%}
+    {%- assign a_author_raw    = item.answer_author | default: q_author_raw -%}
+    {%- assign a_date_raw      = item.answer_date_published | default: item.date_published | default: q_date_raw -%}
+    {%- assign a_date_iso      = a_date_raw | date_to_xmlschema -%}
+    {%- assign q_url           = item.url | default: page_url -%}
+    {%- assign a_url           = item.answer_url | default: q_url -%}
+    {%- assign faq_upvotes     = item.upvoteCount | default: 0 -%}
     {
-      "@type":"Question",
+      "@type": "Question",
       "name": {{ item.q | jsonify }},
-      "acceptedAnswer": { "@type":"Answer", "text": {{ item.a | jsonify }} }
+      "text": {{ q_text_raw | jsonify }},
+      "url": {{ q_url | jsonify }},
+      "author": {
+        "@type": "Organization",
+        "name": {{ q_author_raw | jsonify }}
+      },
+      "datePublished": "{{ q_date_iso }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | jsonify }},
+        "url": {{ a_url | jsonify }},
+        "author": {
+          "@type": "Organization",
+          "name": {{ a_author_raw | jsonify }}
+        },
+        "datePublished": "{{ a_date_iso }}",
+        "upvoteCount": {{ faq_upvotes }}
+      }
     }{%- if forloop.last == false -%},{%- endif -%}
     {%- endfor -%}
   ]
@@ -114,122 +47,3 @@
 </script>
 {%- endif -%}
 
-{%- if page.qapage and page.qapage.question and page.qapage.answer -%}
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"QAPage",
-  "mainEntity": {
-    "@type":"Question",
-    "name": {{ page.qapage.question | jsonify }},
-    "acceptedAnswer": { "@type":"Answer", "text": {{ page.qapage.answer | jsonify }} }
-  }
-}
-</script>
-{%- endif -%}
-
-{%- if page.breadcrumbs and page.breadcrumbs.size > 0 -%}
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {%- for bc in page.breadcrumbs -%}
-    {
-      "@type":"ListItem",
-      "position": {{ forloop.index }},
-      "name": {{ bc.name | jsonify }},
-      "item": {{ bc.url | absolute_url | jsonify }}
-    }{%- if forloop.last == false -%},{%- endif -%}
-    {%- endfor -%}
-  ]
-}
-</script>
-{%- endif -%}
-
-{%- if page.speakable -%}
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "url": {{ page_url | jsonify }},
-  "speakable": {
-    "@type":"SpeakableSpecification",
-    "cssSelector": {{ page.speakable | jsonify }}
-  }
-}
-</script>
-{%- endif -%}
-
-{%- assign v = page.video -%}
-{%- if v and (v.contentUrl or v.embedUrl) -%}
-{%- assign vthumb = v.thumbnail | default: page.image | default: site.image -%}
-{%- assign vthumb_abs = vthumb | absolute_url -%}
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"VideoObject",
-  "name": {{ v.name | default: page_title | jsonify }},
-  "description": {{ v.description | default: page_desc | jsonify }},
-  "thumbnailUrl": [ {{ vthumb_abs | jsonify }} ]{% if v.uploadDate %},
-  "uploadDate": "{{ v.uploadDate }}"{% endif %}{% if v.duration %},
-  "duration": "{{ v.duration }}"{% endif %}{% if v.contentUrl %},
-  "contentUrl": {{ v.contentUrl | jsonify }}{% endif %}{% if v.embedUrl %},
-  "embedUrl": {{ v.embedUrl | jsonify }}{% endif %},
-  "publisher": {
-    "@type":"Organization",
-    "name": {{ site.organization.name | jsonify }},
-    "logo": { "@type":"ImageObject", "url": {{ site.organization.logo | absolute_url | jsonify }} }
-  }
-}
-</script>
-{%- endif -%}
-
-{%- if page.itemlist and page.itemlist.size > 0 -%}
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ItemList",
-  "itemListElement":[
-    {%- for it in page.itemlist -%}
-    {
-      "@type":"ListItem",
-      "position": {{ forloop.index }},
-      "name": {{ it.name | jsonify }},
-      "url": {{ it.url | absolute_url | jsonify }}
-    }{%- if forloop.last == false -%},{%- endif -%}
-    {%- endfor -%}
-  ]
-}
-</script>
-{%- endif -%}
-
-{%- assign g = page.geo | default: site.place -%}
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name": {{ site.organization.name | jsonify }},
-  "legalName": {{ site.organization.legalName | jsonify }},
-  "url": {{ site.organization.url | jsonify }},
-  "logo": {{ site.organization.logo | absolute_url | jsonify }},
-  "sameAs": {{ site.organization.sameAs | jsonify }}{% if g and g.latitude and g.longitude %},
-  "location": {
-    "@type":"Place",
-    "name": {{ g.name | default: site.organization.name | jsonify }},
-    "address": {
-      "@type":"PostalAddress",
-      "streetAddress": {{ g.address | jsonify }},
-      "addressLocality": {{ g.locality | jsonify }},
-      "addressRegion": {{ g.region | jsonify }},
-      "postalCode": {{ g.postal_code | jsonify }},
-      "addressCountry": {{ g.country | jsonify }}
-    },
-    "geo": {
-      "@type":"GeoCoordinates",
-      "latitude": {{ g.latitude }},
-      "longitude": {{ g.longitude }}
-    }
-  }{% endif %}
-}
-</script>
