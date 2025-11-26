@@ -931,6 +931,10 @@ li.nav-item {
    margin-bottom: 10px !important;
 }
 
+.category-wrapper h3 {
+    font-size: 16px !important;
+}
+
 .cTabWrapper.cBlackBG.cFAQbox {
     padding-left: 40px !important;
     padding-right: 40px !important;
