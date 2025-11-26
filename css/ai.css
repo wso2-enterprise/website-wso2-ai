@@ -938,7 +938,10 @@ li.nav-item {
 .cTabWrapper.cBlackBG.cFAQbox {
     padding-left: 40px !important;
     padding-right: 40px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
 }
+
 
 .cFAQbox  h3.section-title  {
 margin-top: 20px !important;
@@ -961,6 +964,9 @@ background-image: url(https://wso2.cachefly.net/wso2/sites/all/image_resources/d
     background-image: url(https://wso2.cachefly.net/wso2/sites/all/image_resources/down-arrow-white.svg);
 }
 
+.bi-question-circle-fill {
+    display: none !important;
+}
 
 
 
