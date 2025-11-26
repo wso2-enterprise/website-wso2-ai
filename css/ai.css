@@ -115,7 +115,7 @@
     }
 
     h4 {
-        font-size: 1.2rem !important;
+        font-size: 16px !important;
         word-spacing: 3px !important;
         letter-spacing: .008rem !important;
         line-height: 1.8rem !important;
@@ -878,7 +878,7 @@ font-size: 12px;
 
 .accordion-button {
     box-shadow: none !important;
-    padding: 40px 0 40px 40px !important;
+   padding: 20px 0 20px 40px !important;
 
 }
 
