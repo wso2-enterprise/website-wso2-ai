@@ -1020,7 +1020,7 @@ background-image: url(https://wso2.cachefly.net/wso2/sites/all/image_resources/d
 .cta-card {
   background: #14171e;
   border: 1px solid #14171e;
-  padding: 30px;
+  padding: 0px;
   margin-bottom: 20px;
   text-align: center;
   transition: all .2s ease;
@@ -1032,7 +1032,8 @@ background-image: url(https://wso2.cachefly.net/wso2/sites/all/image_resources/d
 
 .cta-card  h3 {
     color: #fff !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 0px !important;
+    padding: 0px 20px 20px 20px !important;
 }
 
 .cta-card:hover {
@@ -1044,12 +1045,12 @@ background-image: url(https://wso2.cachefly.net/wso2/sites/all/image_resources/d
 /* Thumbnail */
 .thumb-wrapper {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .thumb-wrapper img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
   margin-bottom: 20px;
 }
 
